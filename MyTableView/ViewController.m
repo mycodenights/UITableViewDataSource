@@ -44,4 +44,17 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    NSString *recipeSelected = [recipes objectAtIndex:indexPath.row];
+    
+    
+    UIAlertView *messageAlert = [[UIAlertView alloc]
+                                 initWithTitle:@"Hello" message:[NSString stringWithFormat:@"You Selected %@", recipeSelected] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    
+    // Display Alert Message
+    [messageAlert show];
+    
+}
 @end
